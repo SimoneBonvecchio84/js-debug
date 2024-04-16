@@ -95,15 +95,15 @@
 // al valore numerico che l'utenete inserirà tramite prompt.
 //CORREZIONE
 
-function addNumbers(firstNum, secondNum) {
-    const total = firstNum + secondNum;
-    return total;
-}
+// function addNumbers(firstNum, secondNum) {
+//     const total = firstNum + secondNum;
+//     return total;
+// }
 
-const userNumber = parseInt(prompt("inserisci un numero da sommare"));
+// const userNumber = parseInt(prompt("inserisci un numero da sommare"));
 
-const result = addNumbers(userNumber, 45);
-console.log(result);
+// const result = addNumbers(userNumber, 45);
+// console.log(result);
 
 //-------------------------------------------------------------------------------------------------------
 
@@ -122,12 +122,47 @@ console.log(result);
 //     if (grantAccess === true) {
 //         console.log('Accesso consentito!');
 //     } else {
-//         console.log('Accesso negato!');
+//        console.log('Accesso negato!');    
 //     }
 // }
 // checkAccess();
 
+// Analisi Esercizio 4 
+// Questa funzione cerca di controllare se la mail inserita dall'utente è presente nell arrayMail
+// se si consentira l'accesso altrimenti lo negherà.
+// In questo codice sono presenti degli errori sintattici, ovvero:
+// Le variabili booleane false e true sono scritte sotto forma di stringhe mentre in realta siccome 
+// sono un tipo di dato assestante non necessitano di apici.
+// In piu c'è un errore di logica ovvero in questo codice è presente una condizione if totalmente inutile.
+// Perdipiù al suo interno c'è anche un errore di sintassi invatti se scriviamo grantAccess === true il
+// suo valore sarà null 
 
+//CORREZIONE
+
+function checkAccess(arrMail, userMail) {
+     
+    let grantAccess = false;
+     
+    if(arrMail.includes(userMail)) {       
+        console.log('Accesso consentito!');
+        grantAccess = true;
+     } else {
+        console.log('Accesso negato!');   
+     }
+
+     return  grantAccess;
+}
+
+const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+
+const myMail = prompt('Inserisci il tuo indirizzo email');
+
+const resultAccess = checkAccess(addresses,myMail);
+
+console.log(resultAccess, myMail)
+
+
+//--------------------------------------------------------------------------------------------------------
 // ESERCIZIO 5 (suggerimento: c'è un solo errore)
 // function checkAccessImproved() {
 //     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
