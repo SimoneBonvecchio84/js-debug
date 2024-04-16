@@ -34,23 +34,23 @@
 // Esempio qui sotto.
 //CORREZIONE
 
-function checkAge(userAge, resultMess) {
-    if(userAge < 18) {
-        userMess = `Sei troppogiovane! Hai ${userAge} anni!`
-    } else {
-        userMess = 'Hai più di 18 anni!';
-    }
+// function checkAge(userAge, resultMess) {
+//     if(userAge < 18) {
+//         userMess = `Sei troppogiovane! Hai ${userAge} anni!`
+//     } else {
+//         userMess = 'Hai più di 18 anni!';
+//     }
 
-    return userMess;
-}
+//     return userMess;
+// }
 
-let myAge = parseInt(prompt("quanti anni hai"));
+// let myAge = parseInt(prompt("quanti anni hai"));
 
-const message = " ";
+// const message = " ";
 
-const messageRestul = checkAge(myAge, message);
+// const messageRestul = checkAge(myAge, message);
 
-console.log(messageRestul);
+// console.log(messageRestul);
 
 //-----------------------------------------------------------------------------------
 
@@ -60,6 +60,18 @@ console.log(messageRestul);
 //     console.log(`Nella mia palette ci sono ${colors.lenght} colori!`);
 // }
 // printColorsNumber();
+
+// Analisi Esercizio 2
+// Questa funzione detemrmina quanti colori ci sono nell array colors
+// L'unico errore presente è la parola length scritta male.
+//CORREZIONE
+function printColorsNumber() {
+    const colors = ['blue', 'red', 'yellow', 'green', 'black'];
+    console.log(`Nella mia palette ci sono ${colors.length} colori!`);
+}
+printColorsNumber();
+
+//------------------------------------------------------------------------------------------
 
 
 // // ESERCIZIO 3
