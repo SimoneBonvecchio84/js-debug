@@ -65,16 +65,16 @@
 // Questa funzione detemrmina quanti colori ci sono nell array colors
 // L'unico errore presente è la parola length scritta male.
 //CORREZIONE
-function printColorsNumber() {
-    const colors = ['blue', 'red', 'yellow', 'green', 'black'];
-    console.log(`Nella mia palette ci sono ${colors.length} colori!`);
-}
-printColorsNumber();
+// function printColorsNumber() {
+//     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
+//     console.log(`Nella mia palette ci sono ${colors.length} colori!`);
+// }
+// printColorsNumber();
 
 //------------------------------------------------------------------------------------------
 
 
-// // ESERCIZIO 3
+// ESERCIZIO 3
 // function addNumbers() {
 //     const userNumber = prompt('Inserisci un numero');
 //     const total = userNumber + 12;
@@ -82,6 +82,30 @@ printColorsNumber();
 //     console.log(`Il risultato finale è ${total}`);
 // }
 // addNumbers();
+
+//Analisi Esercizio 3
+// Questa funzione tramite prompt cerca di sommare il numero inserito dall'utente con il
+// valore numerico 12 depositato nella cosante total
+// L' errore principale sta nel non aver utilizzato il metodo parseIn che converte il valore 
+// numerico inserito nel propmt in number, cosi in fatti non si ha una somma ma una concatenazione
+// visto che il numero viene considerato una stringa.
+// In più come negli altri casi già visti pure qua potremmo migliorare il codice rendendo la funzione
+// più generica e quindi riutilizzabile
+// sostituendo il valore 12 con un parametro in ingresso insieme al primo parametro che corrispondera 
+// al valore numerico che l'utenete inserirà tramite prompt.
+//CORREZIONE
+
+function addNumbers(firstNum, secondNum) {
+    const total = firstNum + secondNum;
+    return total;
+}
+
+const userNumber = parseInt(prompt("inserisci un numero da sommare"));
+
+const result = addNumbers(userNumber, 45);
+console.log(result);
+
+//-------------------------------------------------------------------------------------------------------
 
 
 // ESERCIZIO 4
