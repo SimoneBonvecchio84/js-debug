@@ -15,7 +15,7 @@ for (let i = 0; i > 5; i++) {
     console.log(i);
 }
 
-//Esercizio 1 
+// Analisi Esercizio 1 
 // E' un ciclo for che compie 5 iterazioni. Internamente c'è un console.log di i che però a schermo
 // non restituisce nulla.
 // Non ci sono errori sintattici ma c'è un errore di logica infatti se dichiariamo che i è uguale a 0
@@ -37,7 +37,7 @@ function addIfEven(num) {
     return num;
 }
 
-//Esercizio2 
+// Analisi Esercizio2 
 // Questa funzione serve per addizionare al numemero cinque solo esclusivamente un numero paro.
 // IL problema qui è di sintasassi e non di logica. Non di può utilizzare l'operatore "=" ovvero 
 // operatore di assegnamento in questo caso. Ma serve un operatore relazionale composto da "===".
@@ -66,27 +66,37 @@ function loopToFive() {
         console.log(i);
     }
 }
-//Esercizio
+// Analisi Esercizio 3 
+// Qui abbiamo una funzione con all interno un ciclo for identico all esercizio uno.
+// A differenza del primo in questo caso non ci sono errori di logica ma di sintassi,
+// Ovvero, all'interno delle tonde del ciclo for si devono utilizzare ";" per separare le istruzioni
+// e non le virgole.
+//CORREZIONE
+function loopToFive() {
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+    }
+   
+}
 
+const indexResult = loopToFive()
 
 //----------------------------------------------------------------------------------------------------
 
 
 // ESERCIZIO 4 (suggerimento: ci sono 7 errori)
-// function displayEvenNumbers() {
-//     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-//     let evenNumbers = [];
-//     for (let i = 0; i < numbers.length - 1; i++;) {
-//         if (numbers % 2 = 0); {
-//             evenNumbers.push(i);
-//         }
-//         return evenNumbers;
-//     }
-// }
-// displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
+function displayEvenNumbers() {
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+    let evenNumbers = [];
+    for (let i = 0; i < numbers.length - 1; i++;) {
+        if (numbers % 2 = 0); {
+            evenNumbers.push(i);
+        }
+        return evenNumbers;
+    }
+}
+displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
 
-// for (let i = 0; i < 9; i++) {
-//     console.log(i);
-//   }
+// Analisi Esercizio 4
   
 
