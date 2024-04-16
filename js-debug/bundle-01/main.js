@@ -20,7 +20,15 @@ for (let i = 0; i > 5; i++) {
 // non restituisce nulla.
 // Non ci sono errori sintattici ma c'è un errore di logica infatti se dichiariamo che i è uguale a 0
 // poi non possiamo dire che è maggiore di 5.
+// CORREZIONE
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
 
+
+
+
+//-----------------------------------------------------------------------------------------------------
 // ESERCIZIO 2
 function addIfEven(num) {
     if (num % 2 = 0) {
@@ -39,6 +47,16 @@ function addIfEven(num) {
 // scelto dall utente ES 
 // const result = addIfEvan(6);
 // console.log(result) ----> output = 11
+//CORREZIONE
+function addIfEven(num) {
+    if (num % 2 === 0) {
+        return num + 5;
+    }
+    return num;
+}
+
+const result = addIfEven(6);
+console.log(result);
 
 //------------------------------------------------------------------------------------------------
 
@@ -48,6 +66,8 @@ function loopToFive() {
         console.log(i);
     }
 }
+//Esercizio
+
 
 //----------------------------------------------------------------------------------------------------
 
