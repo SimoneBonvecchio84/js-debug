@@ -139,27 +139,27 @@
 
 //CORREZIONE
 
-function checkAccess(arrMail, userMail) {
+// function checkAccess(arrMail, userMail) {
      
-    let grantAccess = false;
+//     let grantAccess = false;
      
-    if(arrMail.includes(userMail)) {       
-        console.log('Accesso consentito!');
-        grantAccess = true;
-     } else {
-        console.log('Accesso negato!');   
-     }
+//     if(arrMail.includes(userMail)) {       
+//         console.log('Accesso consentito!');
+//         grantAccess = true;
+//      } else {
+//         console.log('Accesso negato!');   
+//      }
 
-     return  grantAccess;
-}
+//      return  grantAccess;
+// }
 
-const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+// const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
 
-const myMail = prompt('Inserisci il tuo indirizzo email');
+// const myMail = prompt('Inserisci il tuo indirizzo email');
 
-const resultAccess = checkAccess(addresses,myMail);
+// const resultAccess = checkAccess(addresses,myMail);
 
-console.log(resultAccess, myMail)
+// console.log(resultAccess, myMail)
 
 
 //--------------------------------------------------------------------------------------------------------
@@ -191,9 +191,59 @@ console.log(resultAccess, myMail)
 //     }
 //     checkAccessImproved();
 
+// Analisi Esercizio 5 
+// Errori sintattici:
+// let grantAccess in questa variabile è depoitato il valore booleano false sotto forma di stringa
+//  
+// In questa funzione c'è sempre un controllo della mail inserita tramite prompt.
+// In questo caso l'array delle mail viene iterato tramite un ciclo for nel quale 
+// è presente una costante email nella quale viene inserito il valore addresesses[i],
+// ovvero l'elemento corrente dell array.
+// Durante la condizione userEmail variabile che il cui valore verrà inserito tramite propmt è 
+// ad una condizione, ovvero se la sua lunghezza è maggiore di 5 eseguiremo.
+// In questa condizione secondo me è assente un else che è indispensabile laddove la mail inserita
+// sia inferiore a 5 e non sia presente nell array addresses 
+// Un altra condizione
+// Se email è strettamente uguale ad userEmail allora grantAccess uguale a true.
+// Qui incontriamo il primo errore sintattico. True infatti è scritto sotto forma di strinag come
+// nel esercizio precedente.
+// Si può notare fin dall inizio del codice che c'è la prima parentesi graffa di colore rosso.
+// Tutto cio sta a sottoliniare che il codice è delimitato solo all'inizio e non nella parte finale.
+// Si nota che l'ultima condizione si trova all'interno dello scope del ciclo for.
+// Questo è un altro errore visto che il risultato dell controllo va stamapto un unica volta
+// e non reiterato più volte a causa della sua posizione nel ciclo for.
+//CORREZIONE
 
 
 
+ function checkAccessImproved() {
+        const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+    
+        const userEmail = prompt('Inserisci il tuo indirizzo email');
+    
+        let grantAccess = false;
+    
+        for (let i = 0; i < addresses.length; i++) {
+            const email = addresses[i];
+    
+            if (userEmail.length > 5) {
+    
+                if (email === userEmail) {
+                    grantAccess = true;
+    
+                }
+    
+            } else {
+                grantAccess = false;
+            }
+        }    
+            if (grantAccess) {
+                console.log('Accesso consentito!');
+            } else {
+                console.log('Accesso negato!');
+            }
+        }
+        checkAccessImproved();
 
 
 
